@@ -20,5 +20,7 @@ int check_cycle(listint_t *list)
 			return (0);
 		list++;
 	}
+	free_listint(slow);
+	free_listint(fast);
 	return (0);
 }
