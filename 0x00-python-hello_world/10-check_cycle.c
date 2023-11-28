@@ -15,12 +15,19 @@ int check_cycle(listint_t *list)
 		slow = slow->next;
 		fast = fast->next->next;
 		if (slow == fast)
+		{
+			free_listint(slow);
+			free_listint(fast);
 			return (1);
+		}
 		if (fast == NULL)
+		{
+			free_listint(slow);
+			free_listint(fast);
 			return (0);
+		}
 		list++;
 	}
-	free_listint(slow);
-	free_listint(fast);
+
 	return (0);
 }
