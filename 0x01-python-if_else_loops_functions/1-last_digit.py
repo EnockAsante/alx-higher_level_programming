@@ -13,4 +13,3 @@ elif rem == 0:
     print(" and is 0", end="")
 elif rem < 6:
     print(" and is less than 6 and not 0", end="")
-print("\n")
