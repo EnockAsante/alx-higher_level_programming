@@ -8,8 +8,9 @@ if numb_dub > 0:
 
 print (f"last digit of {number} is {rem}", end="")
 if rem > 5:
-    print(" and is greater than 5")
+    print(" and is greater than 5", end="")
 elif rem == 0:
-    print(" and is 0")
+    print(" and is 0", end="")
 elif rem < 6:
-    print(" and is less than 6 and not 0")
+    print(" and is less than 6 and not 0", end="")
+print("\n")
