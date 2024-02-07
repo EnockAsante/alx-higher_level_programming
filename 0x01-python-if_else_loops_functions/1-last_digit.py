@@ -3,8 +3,10 @@ import random
 number = random.randint(-10000, 10000)
 rem = 0
 numb_dub = abs(number)
-if numb_dub > 0:
+if abs(numb_dub) > 0:
     rem = int(numb_dub % 10)
+if number < 0:
+    rem *= -1
 
 print(f"Last digit of {number} is {rem} ", end="")
 if rem > 5:
