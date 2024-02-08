@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/0x01-python-if_else_loops_functions.iml" filepath="$PROJECT_DIR$/.idea/0x01-python-if_else_loops_functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/0x01_python_if_else_loops_functions.iml" filepath="$PROJECT_DIR$/.idea/0x01_python_if_else_loops_functions.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,3 @@
+/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug/CMakeFiles/0x01_python_if_else_loops_functions.dir
+/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug/CMakeFiles/rebuild_cache.dir

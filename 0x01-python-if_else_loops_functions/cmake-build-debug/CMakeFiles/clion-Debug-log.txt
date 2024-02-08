@@ -1,0 +1,4 @@
+/snap/clion/263/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/263/bin/ninja/linux/x64/ninja -G Ninja -S /home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions -B /home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug

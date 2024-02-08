@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "0x01_python_if_else_loops_functions",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "0x01_python_if_else_loops_functions::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-0x01_python_if_else_loops_functions-Debug-02bf8b7d9f82acfbd9cb.json",
+					"name" : "0x01_python_if_else_loops_functions",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug",
+		"source" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
