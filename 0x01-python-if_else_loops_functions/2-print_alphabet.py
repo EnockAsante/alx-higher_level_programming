@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 for i in range(97, 123):
-    print("{}".format(i, str), end = " ")
+    print("{}".format(chr(i)), end = " ")
