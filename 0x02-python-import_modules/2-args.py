@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 from sys import argv
 
-counter = 1
+counter = 0
+print("{:d} arguments:".format(len(argv) - 1))
 for i in argv:
-    print("{:d}: {}".format(counter, i))
+    if counter > 0:
+        print("{:d}: {}".format(counter, i))
     counter += 1
