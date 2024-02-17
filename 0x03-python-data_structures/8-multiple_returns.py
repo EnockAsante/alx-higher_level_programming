@@ -4,5 +4,5 @@ def multiple_returns(sentence):
     if sentence:
         turple_str += (len(sentence), sentence[0],)
     else:
-        turple_str += (0, )
+        turple_str += (0, "None")
     return turple_str
