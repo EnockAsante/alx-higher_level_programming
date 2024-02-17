@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def no_c(my_string):
+    new_string = ""
     if my_string:
         for i in my_string:
-            if i == 'c' or i == 'C':
-                del my_string[i]
-    return my_string
+            if i.upper() != 'C':
+                new_string += i
+    return new_string
