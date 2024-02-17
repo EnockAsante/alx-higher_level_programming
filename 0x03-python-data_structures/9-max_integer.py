@@ -9,6 +9,3 @@ def max_integer(my_list=[]):
         return biggest
     else:
         return "None"
-
-
-print(max_integer([]))
