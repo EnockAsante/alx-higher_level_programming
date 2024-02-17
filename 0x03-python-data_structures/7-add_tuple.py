@@ -1,4 +1,5 @@
-def add_tuple(tuple_a = (), tuple_b = ()):
+#!/usr/bin/python3
+def add_tuple(tuple_a=(), tuple_b=()):
     tuple_res = ()
     if tuple_a and tuple_b:
         if 2 > len(tuple_a) < len(tuple_b):
