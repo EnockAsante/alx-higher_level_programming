@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    biggest = my_list[0]
+    biggest = 0
     if my_list:
+        biggest = my_list[0]
         for i in my_list:
             if i > biggest:
                 biggest = i
@@ -9,3 +10,5 @@ def max_integer(my_list=[]):
     else:
         return "None"
 
+
+print(max_integer([]))
