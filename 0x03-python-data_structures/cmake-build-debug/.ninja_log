@@ -1,0 +1,27 @@
+# ninja log v5
+1	48	1708216956580392001	CMakeFiles/0x03_python_data_structures.dir/13-main.c.o	3b70906dd8babf5
+2	50	1708216956584391951	CMakeFiles/0x03_python_data_structures.dir/cat_linked_lists.c.o	4878ee4ebd320c95
+0	40	1708217073274922327	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+2	58	1708217073294922075	CMakeFiles/0x03_python_data_structures.dir/13-main.c.o	3b70906dd8babf5
+3	64	1708217073302921975	CMakeFiles/0x03_python_data_structures.dir/cat_linked_lists.c.o	4878ee4ebd320c95
+65	106	1708217073342921471	0x03_python_data_structures	14111bc3396f715f
+0	35	1708218439809916643	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+35	65	1708218439837916063	0x03_python_data_structures	14111bc3396f715f
+0	266	1708218527432159200	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+266	334	1708218527500157878	0x03_python_data_structures	14111bc3396f715f
+0	38	1708219662401573401	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+38	65	1708219662425572608	0x03_python_data_structures	14111bc3396f715f
+0	67	1708220066122787243	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+67	149	1708220066206785407	0x03_python_data_structures	14111bc3396f715f
+0	26	1708220235743313746	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+26	60	1708220235775313131	0x03_python_data_structures	14111bc3396f715f
+1	30	1708220610704827846	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+30	56	1708220610732827404	0x03_python_data_structures	14111bc3396f715f
+1	33	1708220676403804394	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+33	58	1708220676427804024	0x03_python_data_structures	14111bc3396f715f
+0	34	1708220770014386547	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+35	77	1708220770050386010	0x03_python_data_structures	14111bc3396f715f
+0	31	1708220793814032788	CMakeFiles/0x03_python_data_structures.dir/13-main.c.o	3b70906dd8babf5
+31	54	1708220793834032492	0x03_python_data_structures	14111bc3396f715f
+0	36	1708221046414410754	CMakeFiles/0x03_python_data_structures.dir/13-is_palindrome.c.o	dcb0f444944cc3e3
+36	68	1708221046446410308	0x03_python_data_structures	14111bc3396f715f

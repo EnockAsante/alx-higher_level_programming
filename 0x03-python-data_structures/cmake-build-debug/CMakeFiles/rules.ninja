@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: 0x01_python_if_else_loops_functions
+# Project: 0x03_python_data_structures
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__0x01_python_if_else_loops_functions_unscanned_Debug
+rule C_COMPILER__0x03_python_data_structures_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/cc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__0x01_python_if_else_loops_functions_unscanned_Debug
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__0x01_python_if_else_loops_functions_Debug
+rule C_EXECUTABLE_LINKER__0x03_python_data_structures_Debug
   command = $PRE_LINK && /usr/bin/cc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /snap/clion/265/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions -B/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug
+  command = /snap/clion/265/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures -B/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

@@ -2,7 +2,7 @@
 	"entries" : 
 	[
 		{
-			"name" : "0x01_python_if_else_loops_functions_BINARY_DIR",
+			"name" : "0x03_python_data_structures_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -11,10 +11,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug"
+			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug"
 		},
 		{
-			"name" : "0x01_python_if_else_loops_functions_IS_TOP_LEVEL",
+			"name" : "0x03_python_data_structures_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -26,7 +26,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "0x01_python_if_else_loops_functions_SOURCE_DIR",
+			"name" : "0x03_python_data_structures_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions"
+			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug"
+			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -151,7 +151,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/263/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/265/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/263/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/265/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -175,7 +175,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/263/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/265/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -451,7 +451,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions"
+			"value" : "/home/gadget/Desktop/ALX/alx-higher_level_programming/0x03-python-data_structures"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -563,7 +563,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/263/bin/ninja/linux/x64/ninja"
+			"value" : "/snap/clion/265/bin/ninja/linux/x64/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -751,7 +751,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "0x01_python_if_else_loops_functions"
+			"value" : "0x03_python_data_structures"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -795,7 +795,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/263/bin/cmake/linux/x64/share/cmake-3.27"
+			"value" : "/snap/clion/265/bin/cmake/linux/x64/share/cmake-3.27"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
