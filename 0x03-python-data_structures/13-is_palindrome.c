@@ -6,7 +6,7 @@
  * @data: data to insert
  * Return: void
  */
-void insertAtBegining(listint_t **head, int data)
+listint_t *insertAtBegining(listint_t **head, int data)
 {
 	listint_t *new;
 
@@ -17,6 +17,7 @@ void insertAtBegining(listint_t **head, int data)
 		new->next = *head;
 		*head = new;
 	}
+	return (new);
 }
 /**
  * cpy - copy item into list
@@ -25,18 +26,14 @@ void insertAtBegining(listint_t **head, int data)
  */
 listint_t *cpy(listint_t **head)
 {
-	listint_t *prev = NULL, *current = *head, *next;
+	listint_t *rev = NULL, *cur = *head;
 
-	while (current != NULL)
+	while (cur != NULL)
 	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
+		insertAtBegining(&rev, (cur)->n);
+		cur = cur->next;
 	}
-	*head = prev;
-
-	return (*head);
+	return (rev);
 }
 /**
  * is_palindrome - checks if list is a palindrome
@@ -47,9 +44,9 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *dup = cpy(head), *cur = *head;
 
-	while (cur != NULL)
+	while(cur != NULL)
 	{
-		if (dup->n != (cur)->n)
+		if(dup->n != (cur)->n)
 			return (0);
 		cur = cur->next, dup = dup->next;
 	}
