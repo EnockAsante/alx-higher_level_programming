@@ -1,39 +1,31 @@
 #include "lists.h"
 
 /**
-  * reverse_listint - everses a listint_t linked list
-  * @head: pointer to head
-  * Return: address to modified list
-  */
-listint_t *reverse_listint(listint_t **head)
-{
-	listint_t *prev = NULL, *nxt = NULL;
-
-	while (*head != NULL)
-	{
-		nxt = (*head)->next;
-		(*head)->next = prev;
-		prev = *head;
-		*head = nxt;
-	}
-	*head = prev;
-	return (*head);
-}
-
-/**
- * is_palindrome - checks if list is a palindrome
- * @head: pointer to list to insert
- * Return: 1 else 0
+ * is_palindrome - function to call check_pal to see if list is palindrome
+ * @head: ptr to the beginning of the list
+ * Return: 0 if not palindrome else 1
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *cur = *head ,*rev = reverse_listint(head);
+	if (head == NULL || *head == NULL)
+		return (1);
+	return (check_pal(head, *head));
+}
 
-	while(cur)
+/**
+ * check_pal - function to check if the list is palindrome
+ * @head: ptr to the beginning of the list
+ * @last: ptr to the end of the list
+ * Return: 0 if not palindrom else 1
+ */
+int check_pal(listint_t **head, listint_t *last)
+{
+	if (last == NULL)
+		return (1);
+	if (check_pal(head, last->next) && (*head)->n == last->n)
 	{
-		if(rev->n != (cur)->n)
-			return (0);
-		cur = cur->next, rev = rev->next;
+		*head = (*head)->next;
+		return (1);
 	}
-	return (1);
+	return (0);
 }
