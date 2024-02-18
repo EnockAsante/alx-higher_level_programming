@@ -25,14 +25,18 @@ void insertAtBegining(listint_t **head, int data)
  */
 listint_t *cpy(listint_t **head)
 {
-	listint_t *rev = NULL, *cur = *head;
+	listint_t *prev = NULL, *current = *head, *next;
 
-	while (cur != NULL)
+	while (current != NULL)
 	{
-		insertAtBegining(&rev, (cur)->n);
-		cur = cur->next;
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
 	}
-	return (rev);
+	*head = prev;
+
+	return (*head);
 }
 /**
  * is_palindrome - checks if list is a palindrome
