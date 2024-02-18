@@ -1,40 +1,25 @@
 #include "lists.h"
-#include "stdlib.h"
-/**
- * insertAtBegining - insert item at beginning of list
- * @head: pointer to list to insert
- * @data: data to insert
- * Return: void
- */
-listint_t *insertAtBegining(listint_t **head, int data)
-{
-	listint_t *new;
 
-	new = (listint_t *)malloc(sizeof(listint_t));
-	if (new != NULL)
-	{
-		new->n = data;
-		new->next = *head;
-		*head = new;
-	}
-	return (new);
-}
 /**
- * cpy - copy item into list
- * @head: pointer to list to insert
- * Return: list
- */
-listint_t *cpy(listint_t **head)
+  * reverse_listint - everses a listint_t linked list
+  * @head: pointer to head
+  * Return: address to modified list
+  */
+listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *rev = NULL, *cur = *head;
+	listint_t *prev = NULL, *nxt = NULL;
 
-	while (cur != NULL)
+	while (*head != NULL)
 	{
-		insertAtBegining(&rev, (cur)->n);
-		cur = cur->next;
+		nxt = (*head)->next;
+		(*head)->next = prev;
+		prev = *head;
+		*head = nxt;
 	}
-	return (rev);
+	*head = prev;
+	return (*head);
 }
+
 /**
  * is_palindrome - checks if list is a palindrome
  * @head: pointer to list to insert
@@ -42,14 +27,13 @@ listint_t *cpy(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *dup = cpy(head), *cur = *head;
+	listint_t *cur = *head ,*rev = reverse_listint(head);
 
-	while(cur != NULL)
+	while(cur)
 	{
-		if(dup->n != (cur)->n)
+		if(rev->n != (cur)->n)
 			return (0);
-		cur = cur->next, dup = dup->next;
+		cur = cur->next, rev = rev->next;
 	}
-	free_listint(dup);
 	return (1);
 }
