@@ -3,7 +3,7 @@ def update_dictionary(a_dictionary, key, value):
     for k, v in a_dictionary.items():
         if k == key:
             k: value
-        elif len(a_dictionary) == 0:
+        elif k != key:
             a_dictionary[key] = value
             return a_dictionary
     return a_dictionary
