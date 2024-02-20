@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def simple_delete(a_dictionary, key = ""):
+def simple_delete(a_dictionary, key=""):
     oc_counts = 0
     for k, v in a_dictionary.items():
         if k == key:
