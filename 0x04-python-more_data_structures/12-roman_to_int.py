@@ -5,9 +5,9 @@ def roman_to_int(roman_string):
     n = []
     s = 0
     if roman_string and isinstance(roman_string, str):
-        for l in roman_string:
+        for i in roman_string:
             for k, v in roman_dict.items():
-                if l == k:
+                if i == k:
                     n.append(v)
         for i, num in enumerate(n):
             if i > 0 and num > n[i - 1]:
