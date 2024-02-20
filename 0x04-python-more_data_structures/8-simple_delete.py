@@ -4,3 +4,6 @@ def simple_delete(a_dictionary, key=""):
     a_dictionary.clear()
     a_dictionary.update(n_d)
     return a_dictionary
+a = {'e':"a", 'w':"e", 'e':"q"}
+print(simple_delete(a, "e"))
+print(a)
