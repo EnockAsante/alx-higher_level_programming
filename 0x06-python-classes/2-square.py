@@ -10,11 +10,11 @@ class Square:
         """constructor for initialising the instance variable
         :@size = size(private) to use"""
         try:
-            if type(size) is int:
-                if size < 0:
-                    raise ValueError
-                else:
-                    self.__size = size
+            if type(size) is not int:
+                raise TypeError
+            if size < 0:
+                raise ValueError
+            self.__size = size
         except TypeError:
             print("size must be an integer")
         except ValueError:
