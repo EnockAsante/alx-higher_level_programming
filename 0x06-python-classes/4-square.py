@@ -7,7 +7,7 @@ class Square:
     class of Square
     """
 
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """constructor for initialising the instance variable
         :@size = size(private) to use"""
         if type(size) is not int:
