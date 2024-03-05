@@ -1,0 +1,108 @@
+# Filename: tests/0-add_integer.txt
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Basic Cases
+>>> add_integer(3, 4)
+7
+>>> add_integer(-2, 5)
+3
+>>> add_integer(0, 0)
+0
+
+# Float Inputs (Casting to integers)
+>>> add_integer(2.5, 3.5)
+5
+>>> add_integer(-1.5, 4.5)
+3
+>>> add_integer(2, 3.5)
+5
+
+# Default Value (b) with integer values
+>>> add_integer(2)
+100
+>>> add_integer(-5)
+93
+
+# More Cases
+# Test with large integers
+>>> add_integer(999999999999999999, 1)
+1000000000000000000
+
+# Test with negative large integers
+>>> add_integer(-999999999999999999, 1)
+-999999999999999998
+
+# Test with both parameters as floats
+>>> add_integer(2.5, 3.5)
+5
+
+# Test with both parameters as negative floats
+>>> add_integer(-2.5, -3.5)
+-5
+
+# Test with one parameter as float and the other as an integer
+>>> add_integer(2.5, 3)
+5
+
+# Test with both parameters as negative integers
+>>> add_integer(-2, -3)
+-5
+
+# Test with the default value for 'b' with float values
+>>> add_integer(5)
+103
+
+# Test with the default value for 'b' as a negative number with float values
+>>> add_integer(-5)
+93
+
+# Unexpected Cases
+# Test with a string as one of the parameters
+>>> add_integer("2", 3)
+# TypeError: a must be an integer
+
+# Test with a string as both parameters
+>>> add_integer("2", "3")
+# TypeError: a must be an integer
+
+# Test with a string as 'b'
+>>> add_integer(2, "3")
+# TypeError: b must be an integer
+
+# Test with a boolean as one of the parameters
+>>> add_integer(True, 3)
+# TypeError: a must be an integer
+
+# Test with a boolean as both parameters
+>>> add_integer(True, False)
+# TypeError: a must be an integer
+
+# Test with a boolean as 'b'
+>>> add_integer(2, True)
+# TypeError: b must be an integer
+
+# Test with a mix of data types
+>>> add_integer(2.5, True)
+# TypeError: a must be an integer
+
+# Test with a mix of data types (floats and strings)
+>>> add_integer(2.5, "3")
+# TypeError: b must be an integer
+
+# Test with a mix of data types (boolean and string)
+>>> add_integer(True, "3")
+# TypeError: a must be an integer
+
+# Test with a mix of data types (boolean, string, and float)
+>>> add_integer(True, "3", 2.5)
+# TypeError: a must be an integer
+
+# Test with None as one of the parameters
+>>> add_integer(None, 3)
+# TypeError: a must be an integer
+
+# Test with None as both parameters
+>>> add_integer(None, None)
+# TypeError: a must be an integer
