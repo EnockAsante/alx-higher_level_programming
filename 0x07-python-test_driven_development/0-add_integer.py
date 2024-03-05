@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 # Filename: 0-add-integer.py
+"""
+add integers
+"""
 def add_integer(a, b = 98):
     """add_integer - add two numbers
     :@param a=lo
