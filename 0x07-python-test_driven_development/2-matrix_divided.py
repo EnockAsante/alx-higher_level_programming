@@ -1,28 +1,36 @@
 #!/usr/bin/python3
-""" Doc """
+
+"""
+matrix division
+"""
 
 
 def matrix_divided(matrix, div):
-    """ Doc """
-    if div == float('inf') or div == -float('inf') or div != div:
-        div = 10
-    if type(div) is not int and type(div) is not float:
-        raise TypeError("div must be a number")
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-    if type(matrix) is not list or (len(matrix) == 0) or type(
-            matrix[0]) is not list or (len(matrix[0]) == 0):
-        raise TypeError("matrix must be a matrix (list of lists) of \
-integers/floats")
-    for row in matrix:
-        if type(row) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of \
-integers/floats")
-        if len(row) != len(matrix[0]):
-            raise TypeError("Each row of the matrix must have the same size")
-        for c in row:
-            if type(c) is not int and type(c) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) of \
-integers/floats")
-
-    return [[round(item / div, 2) for item in row] for row in matrix]
+    """
+    matrix_division with div
+    :param matrix:
+    :param div:
+    :return:new matrix with result
+    """
+    new_mat = []
+    if matrix and type(matrix) is list:
+        for row in matrix:
+            if type(row) is not list:
+                raise TypeError("matrix must be a matrix (list of lists) of "
+                                "integers/floats")
+            new_row = []
+            for i in row:
+                if not isinstance(i, (int, float)):
+                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                len_ = len(matrix[0])
+                if len_ != len(row):
+                    raise TypeError(
+                        "Each row of the matrix must have the same size")
+                if not isinstance(div, (int, float)):
+                    raise TypeError("div must be a number")
+                if div == 0:
+                    raise ZeroDivisionError("division by zero")
+                else:
+                    new_row.append(round(i / div, 2))
+            new_mat.append(new_row)
+    return new_mat
