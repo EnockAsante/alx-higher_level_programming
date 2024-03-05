@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+def add_integer(a, b=98):
+    """
+    add_integer
+    :@param a=lo
+    :@param b=ro
+    :return:result
+    """
+    if not isinstance(a, (float, int)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (float, int)):
+        raise TypeError("b must be an integer")
+    return a + b
+
+
