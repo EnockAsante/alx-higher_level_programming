@@ -1,64 +1,94 @@
-# Filename: tests/1-matrix_divided.txt
+The ``matrix_mul`` module
+======================
 
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+Using ``matrix_mul``
+-------------------
 
-# Basic Cases
->>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
->>> div = 2
->>> matrix_divided(matrix, div)
-[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+Write a function that prints My name is <first name> <last name>
 
->>> matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
->>> div = 10
->>> matrix_divided(matrix, div)
-[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+    Prototype: def matrix_mul(first_name, last_name=""):
+    first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
+    You are not allowed to import any module
 
-# Case with a matrix of floats
->>> matrix = [[1.5, 2.5, 3.5], [4.5, 5.5, 6.5], [7.5, 8.5, 9.5]]
->>> div = 2.5
->>> matrix_divided(matrix, div)
-[[0.6, 1.0, 1.4], [1.8, 2.2, 2.6], [3.0, 3.4, 3.8]]
-
-# Edge Case: Dividing by 1
->>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
->>> div = 1
->>> matrix_divided(matrix, div)
-[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
-
-# Case with negative numbers
->>> matrix = [[-1, -2, -3], [-4, -5, -6], [-7, -8, -9]]
->>> div = -2
->>> matrix_divided(matrix, div)
-[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
-
-# Case with 0 as the divisor
->>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
->>> div = 0
->>> matrix_divided(matrix, div)
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+>>> a = [[3, 2, 1, 5], [9, 1, 3, 0]]
+>>> b = [[2, 9, 0], [1, 3, 5], [2, 4, 7], [8, 1, 5]]
+>>> matrix_mul(a, b)
+[[50, 42, 42], [25, 96, 26]]
+>>> a = 2
+>>> b = [[2, 9, 0], [1, 3, 5], [2, 4, 7], [8, 1, 5]]
+>>> matrix_mul(a, b)
 Traceback (most recent call last):
-    ...
-ZeroDivisionError: division by zero
-
-# Case with a non-numeric divisor
->>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
->>> div = '2'
->>> matrix_divided(matrix, div)
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 15, in matrix_mul
+TypeError: m_a must be a list
+>>> b = "string"
+>>> a = [[2, 9, 0], [1, 3, 5], [2, 4, 7], [8, 1, 5]]
+>>> matrix_mul(a, b)
 Traceback (most recent call last):
-    ...
-TypeError: div must be a number
-
-# Case with rows of different sizes
->>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8]]
->>> div = 2
->>> matrix_divided(matrix, div)
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 17, in matrix_mul
+TypeError: m_b must be a list
+>>> b = [[1, 2], 1]
+>>> a = [[2, 9, 0], [1, 3, 5], [2, 4, 7], [8, 1, 5]]
+>>> matrix_mul(a, b)
 Traceback (most recent call last):
-    ...
-TypeError: Each row of the matrix must have the same size
-
-# Case with a non-matrix input
->>> matrix = [1, 2, 3]
->>> div = 2
->>> matrix_divided(matrix, div)
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 25, in matrix_mul
+TypeError: m_b must be a list of lists
+>>> a = []
+>>> b = [[1, 2],[2, 3]]
+>>> matrix_mul(a, b)
 Traceback (most recent call last):
-    ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 26, in matrix_mul
+ValueError: m_a can't be empty
+>>> b = []
+>>> a = [[1, 2],[2, 3]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 28, in matrix_mul
+ValueError: m_b can't be empty
+>>> b = []
+>>> a = [[1, 2],[2, 3]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 28, in matrix_mul
+ValueError: m_b can't be empty
+>>> b = [[]]
+>>> a = [[1, 2],[2, 3]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 34, in matrix_mul
+ValueError: m_b can't be empty
+>>> a = [[1, 2.456],[2, 3.27386]]
+>>> b = [[1, 2.456],[2, "3"]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 44, in matrix_mul
+TypeError: m_b should contain only integers or floats
+>>> a = [[1, 2.456],[2, 3], [1]]
+>>> b = [[1, 2],[2, 3]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 47, in matrix_mul
+TypeError: each row of m_a must be of the same size
+>>> b = [[1, 2.456],[2, 3], [1]]
+>>> a = [[1, 2],[2, 3]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 50, in matrix_mul
+TypeError: each row of m_b must be of the same size
+>>> a = [[1, 2],[2, 3]]
+>>> b = [[1, 2, 3],[1, 2, 3],[1, 2, 3]]
+>>> matrix_mul(a, b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 52, in matrix_mul
+ValueError: m_a and m_b can't be multiplied
