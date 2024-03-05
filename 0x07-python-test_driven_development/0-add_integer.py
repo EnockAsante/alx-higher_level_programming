@@ -3,7 +3,9 @@
 """
 add integers
 """
-def add_integer(a, b = 98):
+
+
+def add_integer(a, b=98):
     """add_integer - add two numbers
     :@param a=lo
     :@param b=ro
