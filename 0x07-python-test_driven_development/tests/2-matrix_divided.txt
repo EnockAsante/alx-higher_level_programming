@@ -1,0 +1,64 @@
+# Filename: tests/1-matrix_divided.txt
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Basic Cases
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> div = 2
+>>> matrix_divided(matrix, div)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+>>> matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
+>>> div = 10
+>>> matrix_divided(matrix, div)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+
+# Case with a matrix of floats
+>>> matrix = [[1.5, 2.5, 3.5], [4.5, 5.5, 6.5], [7.5, 8.5, 9.5]]
+>>> div = 2.5
+>>> matrix_divided(matrix, div)
+[[0.6, 1.0, 1.4], [1.8, 2.2, 2.6], [3.0, 3.4, 3.8]]
+
+# Edge Case: Dividing by 1
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> div = 1
+>>> matrix_divided(matrix, div)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+
+# Case with negative numbers
+>>> matrix = [[-1, -2, -3], [-4, -5, -6], [-7, -8, -9]]
+>>> div = -2
+>>> matrix_divided(matrix, div)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+# Case with 0 as the divisor
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> div = 0
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# Case with a non-numeric divisor
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> div = '2'
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Case with rows of different sizes
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8]]
+>>> div = 2
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Case with a non-matrix input
+>>> matrix = [1, 2, 3]
+>>> div = 2
+>>> matrix_divided(matrix, div)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
