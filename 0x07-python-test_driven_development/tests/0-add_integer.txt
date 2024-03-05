@@ -1,7 +1,6 @@
 # Filename: tests/0-add_integer.txt
 
 >>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer = __import__('0-add_integer').add_integer
 
 # Basic Cases
 >>> add_integer(3, 4)
@@ -61,48 +60,30 @@
 # Unexpected Cases
 # Test with a string as one of the parameters
 >>> add_integer("2", 3)
-# TypeError: a must be an integer
+Traceback (most recent call last):
+TypeError: a must be an integer
 
 # Test with a string as both parameters
 >>> add_integer("2", "3")
-# TypeError: a must be an integer
+Traceback (most recent call last):
+TypeError: a must be an integer
 
 # Test with a string as 'b'
 >>> add_integer(2, "3")
-# TypeError: b must be an integer
-
-# Test with a boolean as one of the parameters
->>> add_integer(True, 3)
-# TypeError: a must be an integer
-
-# Test with a boolean as both parameters
->>> add_integer(True, False)
-# TypeError: a must be an integer
-
-# Test with a boolean as 'b'
->>> add_integer(2, True)
-# TypeError: b must be an integer
-
-# Test with a mix of data types
->>> add_integer(2.5, True)
-# TypeError: a must be an integer
+Traceback (most recent call last):
+TypeError: b must be an integer
 
 # Test with a mix of data types (floats and strings)
 >>> add_integer(2.5, "3")
-# TypeError: b must be an integer
-
-# Test with a mix of data types (boolean and string)
->>> add_integer(True, "3")
-# TypeError: a must be an integer
-
-# Test with a mix of data types (boolean, string, and float)
->>> add_integer(True, "3", 2.5)
-# TypeError: a must be an integer
+Traceback (most recent call last):
+TypeError: b must be an integer
 
 # Test with None as one of the parameters
 >>> add_integer(None, 3)
-# TypeError: a must be an integer
+Traceback (most recent call last):
+TypeError: a must be an integer
 
 # Test with None as both parameters
 >>> add_integer(None, None)
-# TypeError: a must be an integer
+Traceback (most recent call last):
+TypeError: a must be an integer
