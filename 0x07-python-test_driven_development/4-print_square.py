@@ -29,4 +29,3 @@ def print_square(size):
             i += 1
         if str:
             print()
-print_square(0)
