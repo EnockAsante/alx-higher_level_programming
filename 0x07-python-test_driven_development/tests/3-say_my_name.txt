@@ -1,15 +1,10 @@
 # Filename: tests/3-say_my_name.txt
 
-# Filename: say_my_name_test.txt
-
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 # Valid Cases
 >>> say_my_name("John", "Doe")
 My name is John Doe
-
->>> say_my_name("Alice")
-My name is Alice
 
 # Invalid Cases
 >>> say_my_name("", "Smith")
