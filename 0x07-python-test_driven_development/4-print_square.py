@@ -25,7 +25,7 @@ def print_square(size):
             if i == size:
                 print()
                 i = 0
-            print("{}".format(j), end ="")
+            print("{}".format(j), end="")
             i += 1
         if str:
             print()
