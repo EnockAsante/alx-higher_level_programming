@@ -27,5 +27,6 @@ def print_square(size):
                 i = 0
             print("{}".format(j), end ="")
             i += 1
-        print()
-
+        if str:
+            print()
+print_square(0)
