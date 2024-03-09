@@ -11,7 +11,6 @@ It has multiple sentences.
 <BLANKLINE>
 Each separated by a dot.
 <BLANKLINE>
-<BLANKLINE>
 
 
 >>> text_indentation("Another example? Yes, indeed! It works with multiple characters: !")
@@ -26,16 +25,14 @@ One more test:
 <BLANKLINE>
 just a single sentence.
 <BLANKLINE>
-<BLANKLINE>
 
 
 >>> text_indentation("Handling multiple spaces.    Extra spaces. But still on a new line.")
 Handling multiple spaces.
 <BLANKLINE>
-   Extra spaces.
+Extra spaces.
 <BLANKLINE>
 But still on a new line.
-<BLANKLINE>
 <BLANKLINE>
 
 # Invalid Cases
@@ -57,7 +54,6 @@ TypeError: text must be a string
 <BLANKLINE>
 :
 <BLANKLINE>
-<BLANKLINE>
 
 >>> text_indentation("No space after punctuation.Only a dot.No space after colon.Only a question mark?")
 No space after punctuation.
@@ -68,5 +64,12 @@ No space after colon.
 <BLANKLINE>
 Only a question mark?
 <BLANKLINE>
-<BLANKLINE>
 
+# Custom Case
+>>> text_indentation("text. It . Each.")
+text.
+<BLANKLINE>
+It .
+<BLANKLINE>
+Each.
+<BLANKLINE>
