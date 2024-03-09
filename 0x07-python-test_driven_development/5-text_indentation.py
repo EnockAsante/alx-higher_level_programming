@@ -23,5 +23,5 @@ def text_indentation(text):
             j += 1
     else:
         raise TypeError("text must be a string")
-    print("{}".format(buffer))
+    print("{}".format(buffer), end='')
 
