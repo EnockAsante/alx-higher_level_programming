@@ -1,0 +1,72 @@
+# Filename: tests/5-test_text_indentation.txt
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+# Valid Cases
+>>> text_indentation("This is a sample text. It has multiple sentences. Each separated by a dot.")
+This is a sample text.
+<BLANKLINE>
+It has multiple sentences.
+<BLANKLINE>
+Each separated by a dot.
+<BLANKLINE>
+<BLANKLINE>
+
+
+>>> text_indentation("Another example? Yes, indeed! It works with multiple characters: !")
+Another example?
+<BLANKLINE>
+Yes, indeed! It works with multiple characters:
+<BLANKLINE>
+!
+
+>>> text_indentation("One more test: just a single sentence.")
+One more test:
+<BLANKLINE>
+just a single sentence.
+<BLANKLINE>
+<BLANKLINE>
+
+
+>>> text_indentation("Handling multiple spaces.    Extra spaces. But still on a new line.")
+Handling multiple spaces.
+<BLANKLINE>
+   Extra spaces.
+<BLANKLINE>
+But still on a new line.
+<BLANKLINE>
+<BLANKLINE>
+
+# Invalid Cases
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation("")
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Edge Case
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("No space after punctuation.Only a dot.No space after colon.Only a question mark?")
+No space after punctuation.
+<BLANKLINE>
+Only a dot.
+<BLANKLINE>
+No space after colon.
+<BLANKLINE>
+Only a question mark?
+<BLANKLINE>
+<BLANKLINE>
+
