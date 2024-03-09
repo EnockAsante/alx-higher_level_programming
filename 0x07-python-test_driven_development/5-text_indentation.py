@@ -21,7 +21,7 @@ def text_indentation(text):
                 while j + 1 < len(text) and text[j + 1] == ' ':
                     j += 1
             j += 1
-        print("{}".format(buffer), end='')
+        print("{}".format(buffer))
     else:
         raise TypeError("text must be a string")
 
