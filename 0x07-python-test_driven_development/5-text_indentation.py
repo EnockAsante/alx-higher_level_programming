@@ -6,12 +6,12 @@ text_indentation
 
 
 def text_indentation(text):
-    j = 0
     """
 
     :param text:
     :return:
     """
+    j = 0
     buffer = ""
     if text and type(text) is str:
         while j < len(text):
