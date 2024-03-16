@@ -9,13 +9,9 @@ def max_integer(list=[]):
     """
     if len(list) == 0:
         return None
-    if not isinstance(list, tuple) and not isinstance(list[0], int):
-        raise (TypeError, "value must be int")
     result = list[0]
     i = 1
     while i < len(list):
-        if not isinstance(list[i], int):
-            raise (TypeError, "value must be int")
         if list[i] > result:
             result = list[i]
         i += 1
