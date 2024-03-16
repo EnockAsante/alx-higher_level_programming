@@ -27,4 +27,11 @@ class TestMax(TestCase):
         # Test case where list contains only one integer
         self.assertEqual(max_int([7]), 7)
         self.assertEqual(max_int([]), None)
+        self.assertEqual(max_int([]), None)
+        self.assertEqual(max_int([3]), 3)
+        self.assertEqual(max_int([-3]), -3)
+        self.assertEqual(max_int([-1, -2, -3]), -1)
+        self.assertEqual(max_int([15, 10, 5]), 15)
+        self.assertEqual(max_int([15, 10, 5, -5, -10, 15]), 15)
+        self.assertEqual(max_int([15, 15, 15]), 15)
 
