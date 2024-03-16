@@ -11,10 +11,8 @@ class TestMax(TestCase):
     """
 
     def test_type(self):
-        # self.assertRaises(TypeError, max_int, ["a", "b"])
-        # self.assertRaises(TypeError, max_int, [2.3, 3.0])
-        # self.assertRaises(TypeError, max_int, [1, "a", 3])
-        pass
+        self.assertRaises(TypeError, max_int, ["h", 1])
+        self.assertRaises(TypeError, max_int, [2, [2, 1]])
 
     def test_max(self):
         # Test case where all integers are positive
