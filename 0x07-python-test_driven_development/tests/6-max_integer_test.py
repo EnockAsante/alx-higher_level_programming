@@ -26,6 +26,7 @@ class TestMax(TestCase):
 
         # Test case where list contains only one integer
         self.assertEqual(max_int([7]), 7)
+        self.assertEqual(max_int([]), None)
 
     def test_empty_list(self):
         # Test case where list is empty
