@@ -28,6 +28,3 @@ class TestMax(TestCase):
         self.assertEqual(max_int([7]), 7)
         self.assertEqual(max_int([]), None)
 
-    def test_empty_list(self):
-        # Test case where list is empty
-        self.assertIsNone(max_int([]))
