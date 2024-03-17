@@ -83,15 +83,18 @@ class Rectangle:
         return rect_1 if rect_1.area() > rect_2.area() else rect_2
 
     @classmethod
-    def test_passed_cls(cls, value):
+    def test_passed_cls(cls, value, name):
         if type(value) is not int:
-            raise TypeError("height must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("{} must be >= 0".format(name))
         else:
             return 1
 
     @classmethod
     def square(cls, size=0):
-        if Rectangle.test_passed_cls(size):
-            return Rectangle(size, size)
+        if Rectangle.test_passed_cls(size, "height"):
+            pass
+        if Rectangle.test_passed_cls(size, "width"):
+            pass
+        return Rectangle(size, size)
