@@ -17,14 +17,6 @@ class Rectangle:
         if self.test_passed(height, "height"):
             self.__height = height
 
-    def width(self, value):
-        if self.test_passed(value, "width"):
-            self.__width = value
-
-    def height(self, value):
-        if self.test_passed(value, "height"):
-            self.__width = value
-
     def test_passed(self, value, name):
         if type(value) is not int:
             raise (TypeError, "{} must be an integer".format(name))
@@ -33,10 +25,20 @@ class Rectangle:
         else:
             return 1
 
+    @property
     def width(self):
         return self.__width
 
+    @width.setter
+    def width(self, value):
+        if self.test_passed(value, "width"):
+            self.__width = value
+
+    @property
     def height(self):
         return self.__height
 
-
+    @height.setter
+    def height(self, value):
+        if self.test_passed(value, "height"):
+            self.__height = value
