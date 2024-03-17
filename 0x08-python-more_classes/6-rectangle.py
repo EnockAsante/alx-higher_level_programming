@@ -69,7 +69,6 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        if Rectangle.num_of_inst > 0:
-            Rectangle.num_of_inst -= 1
+        Rectangle.num_of_inst -= 1
         print("Bye rectangle...")
 
