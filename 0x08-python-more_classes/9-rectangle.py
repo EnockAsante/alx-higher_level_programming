@@ -93,8 +93,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        if Rectangle.test_passed_cls(size, "height"):
-            pass
         if Rectangle.test_passed_cls(size, "width"):
+            pass
+        if Rectangle.test_passed_cls(size, "height"):
             pass
         return Rectangle(size, size)
