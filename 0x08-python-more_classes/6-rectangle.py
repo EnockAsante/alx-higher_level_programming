@@ -19,7 +19,6 @@ class Rectangle:
             self.__height = height
         Rectangle.number_of_instances += 1
 
-
     def test_passed(self, value, name):
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
