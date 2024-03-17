@@ -10,12 +10,15 @@ class Rectangle:
     """
     __width = 0
     __height = 0
+    num_of_inst = 0
 
     def __init__(self, width=0, height=0):
         if self.test_passed(width, "width"):
             self.__width = width
         if self.test_passed(height, "height"):
             self.__height = height
+        Rectangle.num_of_inst += 1
+
 
     def test_passed(self, value, name):
         if type(value) is not int:
@@ -66,4 +69,10 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
+        if Rectangle.num_of_inst > 0:
+            Rectangle.num_of_inst -= 1
         print("Bye rectangle...")
+
+    @classmethod
+    def number_of_instances(cls):
+        return cls.num_of_inst
