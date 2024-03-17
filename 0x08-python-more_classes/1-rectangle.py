@@ -12,15 +12,13 @@ class Rectangle:
     __height = 0
 
     def __init__(self, width = 0, height = 0):
-        if self.test_passed(width, "width"):
-            self.__width = width
-        if self.test_passed(height, "height"):
-            self.__height = height
+        self.__width = width
+        self.__height = height
 
     def test_passed(self, value, name):
         if type(value) is not int:
             raise (TypeError, "{} must be an integer".format(name))
-        elif value < 0:
+        if value < 0:
             raise (ValueError, "{} must be >= 0".format(name))
         else:
             return 1
