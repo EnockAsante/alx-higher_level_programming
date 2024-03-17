@@ -73,6 +73,3 @@ class Rectangle:
             Rectangle.num_of_inst -= 1
         print("Bye rectangle...")
 
-    @classmethod
-    def number_of_instances(cls):
-        return cls.num_of_inst
