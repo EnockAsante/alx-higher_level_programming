@@ -12,8 +12,8 @@ class Rectangle:
     __height = 0
 
     def __init__(self, width = 0, height = 0):
-        width(width)
-        height(height)
+        self.width = width
+        self.height = height
 
     def width(self, value):
         if type(value) is not int:
@@ -29,7 +29,7 @@ class Rectangle:
         elif value < 0:
             raise (ValueError, "height must be >= 0")
         else:
-            self.__width = value
+            self.__height = value
 
     def width(self):
         return self.__width
