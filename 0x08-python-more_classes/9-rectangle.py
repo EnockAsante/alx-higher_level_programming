@@ -86,5 +86,5 @@ class Rectangle:
     def square(cls, size = 0):
         if type(size) is not int:
             raise TypeError("must be int")
-        if size > 0:
+        if size >= 0:
             return Rectangle(size, size)
