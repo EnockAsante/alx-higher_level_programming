@@ -11,7 +11,7 @@ class Rectangle:
     __width = 0
     __height = 0
 
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         if self.test_passed(width, "width"):
             self.__width = width
         if self.test_passed(height, "height"):
@@ -55,7 +55,7 @@ class Rectangle:
         rec = ""
 
         if self.__height * self.__width == 0:
-            return None
+            return ""
         for j in range(self.__height):
             rec += '#' * self.__width
             if j < self.__height - 1:
