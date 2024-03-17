@@ -11,7 +11,7 @@ class Rectangle:
     __width = 0
     __height = 0
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width = 0, height = 0):
         if self.test_passed(width, "width"):
             self.__width = width
         if self.test_passed(height, "height"):
@@ -64,3 +64,6 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        print("Bye rectangle...")
