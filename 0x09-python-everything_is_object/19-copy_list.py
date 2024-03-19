@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def copy_list(l):
-    return l[:] if l and len(l) > 0 else []
+def copy_list(lst):
+    return lst[:] if lst and len(lst) > 0 else []
