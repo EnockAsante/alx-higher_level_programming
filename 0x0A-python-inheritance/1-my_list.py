@@ -5,10 +5,11 @@ mod my list
 
 
 class MyList(list):
-    """Class with method print_sorted"""
-    pass
+    """
+    :mylist
+    """
+    def __init__(self):
+        super().__init__()
 
     def print_sorted(self):
-        """Methot that sorted a list"""
-
         print(sorted(list(self)))
