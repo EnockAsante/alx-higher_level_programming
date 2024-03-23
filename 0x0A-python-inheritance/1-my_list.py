@@ -13,3 +13,9 @@ class MyList(list):
 
     def print_sorted(self):
         print(sorted(list(self)))
+
+    def __str__(self):
+        """
+        Returns the string representation of the list.
+        """
+        return str(self)
