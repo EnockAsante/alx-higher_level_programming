@@ -9,4 +9,4 @@ def lookup(obj):
     :param obj:
     :return:
     """
-    return dict(obj) if obj else None
+    return dir(obj) if obj else None
