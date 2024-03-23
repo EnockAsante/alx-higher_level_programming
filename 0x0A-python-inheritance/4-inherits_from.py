@@ -5,6 +5,12 @@ mod instance
 
 
 def inherits_from(obj, a_class):
+    """
+
+    :param obj:
+    :param a_class:
+    :return:
+    """
     if isinstance(obj, a_class):
         return True
     for sub in a_class.__subclasses__():
