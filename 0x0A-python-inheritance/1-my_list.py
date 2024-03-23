@@ -13,5 +13,4 @@ class MyList(list):
         super().__init__()
 
     def print_sorted(self):
-        if self:
-            print(sorted(self))
+        print(sorted(self))
