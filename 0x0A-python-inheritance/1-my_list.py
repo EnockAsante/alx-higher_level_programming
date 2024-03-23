@@ -10,8 +10,7 @@ class MyList(list):
     """
 
     def __init__(self):
-        super().__init__()
+        pass
 
     def print_sorted(self):
-        if self:
-            print(sorted(self))
+        print(sorted(self))
