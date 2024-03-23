@@ -6,8 +6,9 @@ mod my list
 
 class MyList(list):
     """
-
+    :mylist
     """
+
     def __init__(self):
         super().__init__()
 
