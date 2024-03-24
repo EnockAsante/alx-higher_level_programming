@@ -25,12 +25,3 @@ class Student:
     def reload_from_json(self, json):
         for k, v in json.items():
             setattr(self, k, v)
-        """                               
-                    ---------alternatively----------  
-                        if k == "first_name":         
-                            self.first_name = v       
-                        if k == "last_name":          
-                            self.last_name = v        
-                        if k == "age":                
-                            self.age = v              
-        """
