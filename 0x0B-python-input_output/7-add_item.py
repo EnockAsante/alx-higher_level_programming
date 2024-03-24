@@ -10,7 +10,7 @@ new_list = []
 try:
     new_list = load_from_json_file("add_item.json")
 except FileNotFoundError:
-    with open("add_item.json", "w", encoding = "UTF8") as f:
+    with open("add_item.json", "w", encoding="UTF8") as f:
         pass
 for idx, arg in enumerate(argv):
     if idx > 0:
