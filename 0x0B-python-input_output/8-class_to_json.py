@@ -3,6 +3,7 @@
 mod class to json
 """
 
+
 def class_to_json(obj):
     """
 
