@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 mod write file
 """
