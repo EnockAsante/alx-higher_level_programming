@@ -23,10 +23,7 @@ class Student:
             return dic
 
     def reload_from_json(self, json):
-
-        dic = json
-
-        for k, v in dic.items():
+        for k, v in json.items():
             setattr(self, k, v)
         """
         ---------alternatively---------- 
