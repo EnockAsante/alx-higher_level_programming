@@ -9,6 +9,6 @@ def read_file(filename=""):
     :param filename:
     :return:
     """
-    with open(filename, 'r', encoding = "UTF8") as f:
+    with open(filename, 'r', encoding="UTF8") as f:
         for line in f:
-            print("{}".format(line), end = "")
+            print("{}".format(line), end="")
