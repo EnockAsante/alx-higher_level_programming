@@ -10,7 +10,7 @@ class Student:
         self.last_name = lname
         self.age = age
 
-    def to_json(self, attrs = None):
+    def to_json(self, attrs=None):
         dic = vars(self)
         new_dic = {}
         if type(attrs) is list:
