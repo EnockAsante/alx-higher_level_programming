@@ -23,7 +23,7 @@ class Student:
             return dic
 
     def reload_from_json(self, json):
-        dic = vars(json)
+        dic = json
         for k, v in dic.items():
             if k == "first_name":
                 self.first_name = v
