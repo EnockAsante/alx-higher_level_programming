@@ -23,11 +23,17 @@ class Student:
             return dic
 
     def reload_from_json(self, json):
+
         dic = json
+
         for k, v in dic.items():
+            setattr(self, k, v)
+        """
+        ---------alternatively---------- 
             if k == "first_name":
                 self.first_name = v
             if k == "last_name":
                 self.last_name = v
             if k == "age":
                 self.age = v
+        """
