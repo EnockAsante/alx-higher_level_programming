@@ -4,9 +4,8 @@ read_file mod
 """
 
 
-def read_file(filename = ""):
+def read_file(filename=""):
     """
-
     :param filename:
     :return:
     """
