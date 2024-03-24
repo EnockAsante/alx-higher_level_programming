@@ -12,4 +12,4 @@ def write_file(filename="", text=""):
     :return:
     """
     with open(filename, "w", encoding="UTF8") as f:
-        f.write(text)
+        return f.write(text)
