@@ -11,5 +11,5 @@ def append_write(filename="", text=""):
     :param text:
     :return:
     """
-    with open(filename, "a", encoding = "UFT8") as f:
+    with open(filename, "a", encoding="UFT8") as f:
         return f.write(text)
