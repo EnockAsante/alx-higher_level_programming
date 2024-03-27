@@ -39,7 +39,7 @@ class Square(Rectangle):
         if args and len(args) > 1:
             for i in range(len(args)):
                 if i == 0:
-                    Rectangle.id = args[0]
+                    Square.id = args[0]
                 if i == 1 and self.validator("width", args[1]):
                     self.__width = args[1]
                 if i == 3 and self.validator("x", args[3]):
