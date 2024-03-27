@@ -18,6 +18,10 @@ class Base:
             self.id = self.__nb_objects
 
     def to_json_string(list_dictionaries):
+        """
+
+        :return:
+        """
         if not list_dictionaries:
             return "[]"
         return str(list_dictionaries)
