@@ -10,22 +10,18 @@ class Rectangle(Base):
     """
     Rectangle class
     """
-    __height = None
-    __width = None
-    __x = None
-    __y = None
     print_symbol = "#"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         if self.validator("width", width):
-            self.__width = width
+            self.width = width
         if self.validator("height", height):
-            self.__height = height
+            self.height = height
         if self.validator("x", x):
-            self.__x = x
+            self.x = x
         if self.validator("y", y):
-            self.__y = y
+            self.y = y
 
     @property
     def width(self):
@@ -136,4 +132,10 @@ class Rectangle(Base):
 
         :return:
         """
-        return vars(self)
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+        }
