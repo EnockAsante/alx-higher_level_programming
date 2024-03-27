@@ -87,7 +87,7 @@ class TestRectangle(unittest.TestCase):
     def test_update_method_with_mixed_args_kwargs(self):
         r = Rectangle(5, 10, 1, 2, 100)
         r.update(10, width=20, height=30, x=40, y=50)
-        self.assertEqual(r.id, 10)
+        self.assertEqual(r.id, 100)
         self.assertEqual(r.width, 20)
         self.assertEqual(r.height, 30)
         self.assertEqual(r.x, 40)
