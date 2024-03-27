@@ -83,4 +83,3 @@ class Rectangle(Base):
         :return:
         """
         return self.__height * self.__width
-
