@@ -96,4 +96,6 @@ class Rectangle(Base):
             rect += str(self.print_symbol) * self.__width
             if j < self.__height - 1:
                 rect += '\n'
+        for itm in rect:
+            print(itm, end="")
         return rect
