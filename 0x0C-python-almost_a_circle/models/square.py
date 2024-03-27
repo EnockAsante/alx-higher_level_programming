@@ -28,3 +28,24 @@ class Square(Rectangle):
         if self.validator("width", width):
             self.width = width
             self.height = width
+
+    def update(self, *args, **kwargs):
+        """
+
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        if args and len(args) > 1:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                if i == 1 and self.validator("width", args[1]):
+                    self.__width = args[1]
+                if i == 3 and self.validator("x", args[3]):
+                    self.__x = args[3]
+                if i == 4 and self.validator("y", args[4]):
+                    self.__y = args[4]
+        for k, v in kwargs.items():
+            self.validator(k, v)
+            setattr(self, k, v)
