@@ -78,5 +78,9 @@ class Rectangle(Base):
         return True
 
     def area(self):
+        """
+
+        :return:
+        """
         return self.__height * self.__width
 
