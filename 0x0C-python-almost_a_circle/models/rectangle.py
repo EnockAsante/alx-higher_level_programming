@@ -15,7 +15,7 @@ class Rectangle(Base):
     __x = None
     __y = None
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x = 0, y = 0, id = None):
         super().__init__(id)
         if self.validator("width", width):
             self.__width = width
@@ -72,7 +72,11 @@ class Rectangle(Base):
         if isinstance(var, int):
             if name in "width,height" and var <= 0 or name in "xy" and var < 0:
                 raise ValueError("{} must be {}".format(name,
-                                 ">= 0" if name in "xy" else "> 0"))
+                                                        ">= 0" if name in "xy" else "> 0"))
         else:
             raise TypeError("{} must be an integer".format(name))
         return True
+
+    def area(self):
+        return self.__height * self.__width
+
