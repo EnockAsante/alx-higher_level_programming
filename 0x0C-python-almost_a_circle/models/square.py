@@ -36,7 +36,7 @@ class Square(Rectangle):
         :param kwargs:
         :return:
         """
-        if args and len(args) > 1:
+        if args and len(args) >= 1:
             for i in range(len(args)):
                 if i == 0:
                     self.id = args[0]
