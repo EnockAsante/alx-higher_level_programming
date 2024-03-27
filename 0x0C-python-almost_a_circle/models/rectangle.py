@@ -98,4 +98,5 @@ class Rectangle(Base):
                 rect += '\n'
         for itm in rect:
             print(itm, end="")
+        print()
         return rect
