@@ -126,4 +126,3 @@ class Rectangle(Base):
                 self.__x = args[3]
             if i == 4 and self.validator("y", args[4]):
                 self.__y = args[4]
-
