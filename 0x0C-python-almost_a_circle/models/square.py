@@ -49,3 +49,15 @@ class Square(Rectangle):
         for k, v in kwargs.items():
             self.validator(k, v)
             setattr(self, k, v)
+
+    def to_dictionary(self):
+        """
+
+        :return:
+        """
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'size': self.width
+        }
