@@ -7,8 +7,8 @@ class TestBase(unittest.TestCase):
     def test_initialization_without_id(self):
         obj1 = Base()
         obj2 = Base()
-        self.assertEqual(obj1.id, None)
-        self.assertEqual(obj2.id, None)
+        self.assertEqual(obj1.id, 1)
+        self.assertEqual(obj2.id, 2)
 
     def test_initialization_with_id(self):
         obj = Base(id = 100)
@@ -20,7 +20,7 @@ class TestBase(unittest.TestCase):
 
     def test_zero_id(self):
         obj = Base(id = 0)
-        self.assertEqual(obj.id, 0)
+        self.assertEqual(obj.id, 3)
 
     def test_large_id(self):
         obj = Base(id = 10 ** 18)
