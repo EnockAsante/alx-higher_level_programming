@@ -63,6 +63,12 @@ class Rectangle(Base):
             self.__y = y
 
     def validator(self, name, var):
+        """
+
+        :param name:
+        :param var:
+        :return:
+        """
         if isinstance(var, int):
             if name in "width,height" and var <= 0 or name in "xy" and var < 0:
                 raise ValueError("{} must be {}".format(name,
