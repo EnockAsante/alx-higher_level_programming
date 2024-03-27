@@ -109,20 +109,24 @@ class Rectangle(Base):
                                                       self.__height)
         return msg
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
 
         :param args:
         :return:
         """
-        for i in range(len(args)):
-            if i == 0:
-                super().__init__(args[0])
-            if i == 1 and self.validator("width", args[1]):
-                self.__width = args[1]
-            if i == 2 and self.validator("height", args[2]):
-                self.__height = args[2]
-            if i == 3 and self.validator("x", args[3]):
-                self.__x = args[3]
-            if i == 4 and self.validator("y", args[4]):
-                self.__y = args[4]
+        if args and len(args) > 1:
+            for i in range(len(args)):
+                if i == 0:
+                    super().__init__(args[0])
+                if i == 1 and self.validator("width", args[1]):
+                    self.__width = args[1]
+                if i == 2 and self.validator("height", args[2]):
+                    self.__height = args[2]
+                if i == 3 and self.validator("x", args[3]):
+                    self.__x = args[3]
+                if i == 4 and self.validator("y", args[4]):
+                    self.__y = args[4]
+        for k, v in kwargs.items():
+            self.validator(k, v)
+            setattr(self, k, v)
