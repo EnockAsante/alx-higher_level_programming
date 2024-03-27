@@ -69,10 +69,10 @@ class Rectangle(Base):
         :param var:
         :return:
         """
+        msg = "{} must be {}".format(name, ">= 0" if name in "xy" else "> 0")
         if isinstance(var, int):
             if name in "width,height" and var <= 0 or name in "xy" and var < 0:
-                raise ValueError("{} must be {}".format(name,
-                                                        ">= 0"if name in "xy" else "> 0"))
+                raise ValueError(msg)
         else:
             raise TypeError("{} must be an integer".format(name))
         return True
