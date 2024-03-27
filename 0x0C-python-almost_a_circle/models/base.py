@@ -2,7 +2,7 @@
 """
 mod base
 """
-
+import json
 
 class Base:
     """
@@ -24,4 +24,4 @@ class Base:
         """
         if not list_dictionaries:
             return "[]"
-        return str(list_dictionaries)
+        return json.dumps(list_dictionaries)
