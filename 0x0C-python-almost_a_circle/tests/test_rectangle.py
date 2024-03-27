@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import unittest
 from models.rectangle import Rectangle
 
@@ -66,3 +65,31 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             r = Rectangle(20, 0, 2, 3, 1)
+
+    def test_update_method_with_args(self):
+        r = Rectangle(5, 10, 1, 2, 100)
+        r.update(10, 20, 30, 40, 50)
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
+
+    def test_update_method_with_kwargs(self):
+        r = Rectangle(5, 10, 1, 2, 100)
+        r.update(id=10, width=20, height=30, x=40, y=50)
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
+
+    def test_update_method_with_mixed_args_kwargs(self):
+        r = Rectangle(5, 10, 1, 2, 100)
+        r.update(10, width=20, height=30, x=40, y=50)
+        self.assertEqual(r.id, 10)
+        self.assertEqual(r.width, 20)
+        self.assertEqual(r.height, 30)
+        self.assertEqual(r.x, 40)
+        self.assertEqual(r.y, 50)
+
