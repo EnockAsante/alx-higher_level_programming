@@ -14,6 +14,7 @@ class Rectangle(Base):
     __width = None
     __x = None
     __y = None
+    print_symbol = "#"
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -83,3 +84,16 @@ class Rectangle(Base):
         :return:
         """
         return self.__height * self.__width
+
+    def display(self):
+        """
+        :display
+        """
+        rect = ""
+        if self.area == 0:
+            return ""
+        for j in range(self.__height):
+            rect += str(self.print_symbol) * self.__width
+            if j < self.__height - 1:
+                rect += '\n'
+        return rect
