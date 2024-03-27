@@ -28,9 +28,3 @@ class Square(Rectangle):
         if self.validator("width", width):
             self.width = width
             self.height = width
-
-
-
-
-
-
