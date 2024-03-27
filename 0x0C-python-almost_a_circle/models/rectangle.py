@@ -132,4 +132,8 @@ class Rectangle(Base):
             setattr(self, k, v)
 
     def to_dictionary(self):
+        """
+
+        :return:
+        """
         return vars(self)
