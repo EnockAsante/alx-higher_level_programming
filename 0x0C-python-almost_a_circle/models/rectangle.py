@@ -92,7 +92,9 @@ class Rectangle(Base):
         rect = ""
         if self.area == 0:
             return ""
+        rect += '\n' * self.__y
         for j in range(self.__height):
+            rect += " " * self.__x
             rect += str(self.print_symbol) * self.__width
             if j < self.__height - 1:
                 rect += '\n'
