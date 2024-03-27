@@ -20,19 +20,17 @@ class Square(Rectangle):
         return msg
 
     @property
-    def width(self):
+    def size(self):
         return self.width
 
-    @width.setter
-    def width(self, width):
+    @size.setter
+    def size(self, width):
         if self.validator("width", width):
-            self.width(width)
+            self.width = width
+            self.height = width
 
-    @property
-    def height(self):
-        return self.height
 
-    @height.setter
-    def height(self, height):
-        if self.validator("height", height):
-            self.height(height)
+
+
+
+
