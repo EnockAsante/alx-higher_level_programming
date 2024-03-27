@@ -18,3 +18,21 @@ class Square(Rectangle):
         msg = "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                 self.y, self.height)
         return msg
+
+    @property
+    def width(self):
+        return self.width
+
+    @width.setter
+    def width(self, width):
+        if self.validator("width", width):
+            self.width(width)
+
+    @property
+    def height(self):
+        return self.height
+
+    @height.setter
+    def height(self, height):
+        if self.validator("height", height):
+            self.height(height)
