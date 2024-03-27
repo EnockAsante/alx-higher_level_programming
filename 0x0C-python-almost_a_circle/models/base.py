@@ -27,3 +27,4 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+
