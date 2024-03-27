@@ -4,6 +4,7 @@ mod base
 """
 import json
 
+
 class Base:
     """
     Base class
@@ -26,5 +27,3 @@ class Base:
         if not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
-
-
