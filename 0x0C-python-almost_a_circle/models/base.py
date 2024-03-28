@@ -45,5 +45,5 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if not json_string:
-            return {}
+            return "{}"
         return json.loads(json_string)
