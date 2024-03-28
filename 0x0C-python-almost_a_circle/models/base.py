@@ -70,4 +70,3 @@ class Base:
         except FileNotFoundError:
             pass
         return obj_lst
-
