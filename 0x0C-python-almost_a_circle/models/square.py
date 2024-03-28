@@ -56,8 +56,8 @@ class Square(Rectangle):
         :return:
         """
         return {
-            'x': self.x,
             'y': self.y,
+            'x': self.x,
             'id': self.id,
             'size': self.width
         }

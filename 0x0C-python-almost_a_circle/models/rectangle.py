@@ -133,9 +133,9 @@ class Rectangle(Base):
         :return:
         """
         return {
-            'x': self.x,
             'y': self.y,
+            'x': self.x,
             'id': self.id,
+            'width': self.width,
             'height': self.height,
-            'width': self.width
         }
