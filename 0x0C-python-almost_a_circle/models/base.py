@@ -28,14 +28,21 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """
 
         :param list_objs:
         :return:
         """
-        with open("{}.json".format(cls.__name__), 'a', encoding="UTF8") as f:
+
+        with open(cls.__name__ + ".json", "w", encoding="UTF8") as f:
+            lst = []
             if list_objs:
-                f.write(cls.to_json_string(list_objs))
-            else:
-                f.write("")
+                for obj in list_objs:
+                    lst.append(obj.to_dictionary())
+                f.write(cls.to_json_string(lst))
+
+
+
+
