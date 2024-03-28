@@ -12,7 +12,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        if id:
+        if id and type(id) is int:
             self.id = id
         else:
             Base.__nb_objects += 1
