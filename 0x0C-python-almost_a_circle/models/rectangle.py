@@ -95,7 +95,7 @@ class Rectangle(Base):
             if j < self.__height - 1:
                 rect += '\n'
         for itm in rect:
-            print(itm, end="")
+            print(itm, end = "")
         print()
         return rect
 

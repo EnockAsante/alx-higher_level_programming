@@ -5,6 +5,7 @@ mod base
 import json
 
 
+
 class Base:
     """
     Base class
@@ -36,7 +37,7 @@ class Base:
         :return:
         """
 
-        with open(cls.__name__ + ".json", "w", encoding="UTF8") as f:
+        with open(cls.__name__ + ".json", "w", encoding = "UTF8") as f:
             lst = []
             if list_objs:
                 for obj in list_objs:
@@ -48,3 +49,16 @@ class Base:
         if not json_string:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Square:
+            dummy_new = Square(1)
+        if cls is Rectangle:
+            dummy_new = Rectangle(1, 1)
+        else:
+            dummy_new = Square(1)
+        dummy_new.update(**dictionary)
+        return dummy_new
