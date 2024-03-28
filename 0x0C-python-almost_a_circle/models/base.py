@@ -52,13 +52,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        from models.rectangle import Rectangle
-        from models.square import Square
-        if cls is Square:
-            dummy_new = Square(1)
-        if cls is Rectangle:
-            dummy_new = Rectangle(1, 1)
+        """ Create an instance """
+        if cls.__name__ == "Rectangle":
+            new = cls(10, 10)
         else:
-            dummy_new = None
-        dummy_new.update(**dictionary)
-        return dummy_new
+            new = cls(10)
+        new.update(**dictionary)
+        return new
