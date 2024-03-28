@@ -59,6 +59,6 @@ class Base:
         if cls is Rectangle:
             dummy_new = Rectangle(1, 1)
         else:
-            dummy_new = Square(1)
+            dummy_new = None
         dummy_new.update(**dictionary)
         return dummy_new
