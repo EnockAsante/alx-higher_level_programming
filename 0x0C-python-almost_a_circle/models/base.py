@@ -63,7 +63,7 @@ class Base:
     def load_from_file(cls):
         obj_lst = []
         try:
-            with open(cls.__name__ + ".kjson", "r", encoding = "UTF8") as f:
+            with open(cls.__name__ + ".json", "r", encoding = "UTF8") as f:
                 lst_dic = cls.from_json_string(f.read())
                 for itm in lst_dic:
                     obj_lst.append(cls.create(**itm))
