@@ -36,7 +36,7 @@ class Base:
         :return:
         """
 
-        with open(cls.__name__ + ".json", "w", encoding="UTF8") as f:
+        with open(cls.__name__ + ".json", "w", encoding = "UTF8") as f:
             lst = []
             if list_objs:
                 for obj in list_objs:
@@ -58,3 +58,16 @@ class Base:
             new = cls(10)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        obj_lst = []
+        try:
+            with open(cls.__name__ + ".kjson", "r", encoding = "UTF8") as f:
+                lst_dic = cls.from_json_string(f.read())
+                for itm in lst_dic:
+                    obj_lst.append(cls.create(**itm))
+        except FileNotFoundError:
+            pass
+        return obj_lst
+
