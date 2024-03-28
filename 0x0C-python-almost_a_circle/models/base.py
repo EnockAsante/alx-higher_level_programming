@@ -36,7 +36,7 @@ class Base:
         :return:
         """
 
-        with open(cls.__name__ + ".json", "w", encoding = "UTF8") as f:
+        with open(cls.__name__ + ".json", "w", encoding="UTF8") as f:
             lst = []
             if list_objs:
                 for obj in list_objs:
