@@ -61,7 +61,6 @@ class Rectangle(Base):
 
     def validator(self, name, var):
         """
-
         :param name:
         :param var:
         :return:
